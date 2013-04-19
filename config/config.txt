@@ -88,7 +88,7 @@ PROBABILITY REVOLUTION 1
 PROBABILITY CHANGELING 5
 PROBABILITY CULT 1
 PROBABILITY MONKEY 0
-PROBABILITY TRAITORCHAN 1
+PROBABILITY TRAITORCHAN 5
 PROBABILITY EXTEND-A-TRAITORMONGOUS 0
 PROBABILITY EPIDEMIC 0
 PROBABILITY MEME 0
@@ -109,7 +109,7 @@ ALLOW_ADMIN_OOCCOLOR
 # ALLOW_METADATA
 
 ## allow players to initiate a restart vote
-#ALLOW_VOTE_RESTART
+ALLOW_VOTE_RESTART
 
 ## allow players to initate a mode-change start
 #ALLOW_VOTE_MODE
@@ -170,7 +170,7 @@ FEATURE_OBJECT_SPELL_SYSTEM
 LOAD_JOBS_FROM_TXT
 
 ##Remove the # mark infront of this to forbid admins from posssessing the singularity.
-#FORBID_SINGULO_POSSESSION
+FORBID_SINGULO_POSSESSION
 
 ## Remove the # to show a popup 'reply to' window to every non-admin that recieves an adminPM. 
 ## The intention is to make adminPMs more visible. (although I fnd popups annoying so this defaults to off)
