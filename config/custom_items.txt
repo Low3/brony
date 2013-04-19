@@ -1,0 +1,2 @@
+atomicdog92: Seth Sealis: /obj/item/clothing/suit/det_suit/fluff/leatherjack
+botanistpower:
