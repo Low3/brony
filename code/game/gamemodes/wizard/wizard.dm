@@ -1,4 +1,3 @@
-
 /datum/game_mode
 	var/list/datum/mind/wizards = list()
 
@@ -6,7 +5,7 @@
 	name = "wizard"
 	config_tag = "wizard"
 	required_players = 1
-	required_players_secret = 1
+	required_players_secret = 6
 	required_enemies = 1
 	recommended_enemies = 1
 
