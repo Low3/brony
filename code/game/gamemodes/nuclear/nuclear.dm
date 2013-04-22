@@ -8,7 +8,7 @@
 	required_players = 1
 	required_players_secret = 10 // 25 players - 5 players to be the nuke ops = 20 players remaining
 	required_enemies = 1
-	recommended_enemies = 4
+	recommended_enemies = 3
 
 	uplink_welcome = "Corporate Backed Uplink Console:"
 	uplink_uses = 40
