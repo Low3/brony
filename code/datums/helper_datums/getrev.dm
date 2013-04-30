@@ -14,7 +14,6 @@ var/global/datum/getrev/revdata = new("config/svndir.txt")
 	var/revhref
 
 	proc/abort()
-		world.log << "Unable to get revision info."
 		spawn()
 			del src
 
@@ -64,7 +63,6 @@ var/global/datum/getrev/revdata = new("config/svndir.txt")
 				s_archive = s
 			if(!revision)
 				abort()
-			world.log << "Running TG Revision Number: [revision]."
 			diary << "Revision info loaded succesfully"
 			return
 		return abort()
@@ -91,10 +89,8 @@ client/verb/showrevinfo()
 	set category = "OOC"
 	set name = "Show Server Revision"
 	var/output =  "Sorry, the revision info is unavailable."
-	if(revdata)
-		output = revdata.showInfo()
-
-		output += "Current Infomational Settings: <br>"
-		output += "Protect Authority Roles From Tratior: [config.protect_roles_from_antagonist]<br>"
+	output = file2text("/home/bay12/live/data/gitcommit")
+	output += "Current Infomational Settings: <br>"
+	output += "Protect Authority Roles From Tratior: [config.protect_roles_from_antagonist]<br>"
 	usr << browse(output,"window=revdata");
 	return

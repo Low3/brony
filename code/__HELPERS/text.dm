@@ -13,52 +13,11 @@
  * SQL sanitization
  */
 
-
-
-/proc/sanitize(var/t)
-	var/index = findtext(t, "\n")
-	while(index)
-		t = copytext(t, 1, index) + "#" + copytext(t, index+1)
-		index = findtext(t, "\n")
-
-	index = findtext(t, "\t")
-	while(index)
-		t = copytext(t, 1, index) + "#" + copytext(t, index+1)
-		index = findtext(t, "\t")
-	index = findtext(t, "ÿ")
-	while(index)
-		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
-
-	t = html_encode(t)
-
-	index = findtext(t, "____255;")
-	while(index)
-		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+8)
-		index = findtext(t, "____255;")
-
-	return t
-
-/proc/sanitize_ya(var/t)
-	var/index = findtext(t, "ÿ")
-	while(index)
-		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
-
-	t = html_encode(t)
-
-	index = findtext(t, "____255;")
-	while(index)
-		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+8)
-		index = findtext(t, "____255;")
-	return t
-
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
 /proc/sanitizeSQL(var/t as text)
 	var/sanitized_text = replacetext(t, "'", "\\'")
 	sanitized_text = replacetext(sanitized_text, "\"", "\\\"")
 	return sanitized_text
-
 
 /*
  * Text sanitization
@@ -84,9 +43,9 @@
 			index = findtext(t, char)
 	return t
 
-/*//Runs byond's sanitization proc along-side sanitize_simple
+//Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(var/t,var/list/repl_chars = null)
-	return html_encode(sanitize_simple(t,repl_chars))*/
+	return html_encode(sanitize_simple(t,repl_chars))
 
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
@@ -129,7 +88,6 @@
 	for(var/i=1, i<=length(t_in), i++)
 		var/ascii_char = text2ascii(t_in,i)
 		switch(ascii_char)
-
 			// A  .. Z
 			if(65 to 90)			//Uppercase Letters
 				t_out += ascii2text(ascii_char)

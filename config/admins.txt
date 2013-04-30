@@ -7,6 +7,6 @@
 
 low3 - Game Master
 cordis - Game Master
-xenouziq - Game Admin
 crystile - Game Admin
+xenouziq - Game Admin
 linteir - Trial Admin

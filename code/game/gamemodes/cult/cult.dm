@@ -22,9 +22,9 @@
 	config_tag = "cult"
 	restricted_jobs = list("Chaplain","AI", "Cyborg", "Security Officer", "Warden", "Detective", "Head of Security", "Captain")
 	protected_jobs = list()
-	required_players = 1
-	required_players_secret = 1
-	required_enemies = 1
+	required_players = 5
+	required_players_secret = 15
+	required_enemies = 3
 	recommended_enemies = 4
 
 	uplink_welcome = "Nar-Sie Uplink Console:"
