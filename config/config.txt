@@ -213,5 +213,5 @@ NUDGE_SCRIPT_PATH nudge.py
 #ALIEN_PLAYER_RATIO 0.2
 
 ##Remove the # to let ghosts spin chairs
-GHOST_INTERACTION
+#GHOST_INTERACTION
 
