@@ -5,5 +5,5 @@
 <strong>Правила и РП подсказки:</strong> <a href="http://baystation12.net/wiki/index.php/Rules">http://baystation12.net/wiki/index.php/Rules</a> или Rules.
 <br><br>
 Это РП сервер, так что не забывайте оставаться в персонаже во время игры. Убедитесь что вы знаете правила и если возникнут вопросы обращайтесь в adminhelp.
-<br>
+<br><br>
 <strong>Удачи и приятной игры!</strong>
